@@ -1,33 +1,95 @@
 # Tugas_Pratikum5
 
-Percobaan 1 : Profile
+1.
+a. Eksekusi seluruh profile yang ada :
+Edit file profile /etc/profile dan tampilkan pesan sebagai berikut :
+echo “Profile dari /etc/profile”
 
-1. File .bash_profile dijalankan pada home direktori pemakai yang login.  File  .bash_profile  adalah hidden file, sehingga untuk melihatnya gunakan opsi a pada instruksi ls. 
-
-2. File .bash_logout akan diekseksi sesaat sebelum logout, berfungsi sebagai house clearing jobs, artinya membersihkan semuanya, misalnya menghapus temporary file atau job lainnya. Melihat file .bash_logout dengan instruksi
-
-Percobaan 2 : History 
-
-1. Melihat batasan maksimum instruksi yang dapat disimpan
-
-2. Melihat daftar instruksi yang telah dilakukan dengan perintah history.  Daftar instruksi dilengkapi dengan nomor urut.  Nomor ini dapat dijadikan parameter dalam mengedit atau mengulang instruksi
-
-3. Selain history, instruksi fc (fix command) juga dapat digunakan
-  
-4. Instruksi fc dapat menampilkan instruksi antara 2 nomor atau dengan menggunakan kata depan instruksi yang diberikan
-
-
-Percobaan 3 : Membuat Bash-script dan menjalankannya 
-
-1. Membuat file p1.sh
-
-2. Mengubah program menjadi executable
-
-3. Menjalankan script
-
-4. Konvensi dalam pembuatan script shell dinyatakan sebagai #!/bin/bash. Tambahkan pada file p1.sh konvensi tersebut
-
-5. Buatlah file p2.sh
-
-6. Menjalankan beberapa program shell dalam satu baris instruksi yang dipisahkan dengan tanda ;  
-
+b. Asumsi nama anda stD02001, maka edit semua profile yang ada yaitu :
+/home/stD02001/.bash_profile
+/home/. stD02001/.bash_login
+/home/mahasiswa/.profile
+/home/mahasiswa/.bashrc
+Ganti nama /home/mahasiswa dengan nama anda sendiri. Pada setiap
+file tersebut, cantumkan instruksi echo, misalnya pada /home/
+mahasiswa/.bash_profile :
+echo “Profile dari .bash_profile”
+Lakukan hal yang sama untuk file lainnya, sesuaikan tampilan dengan nama file
+yang bersangkutan.
+c. Jalankan instruksi subtitute user, kemudian keluar dengan perintah exit sebagai
+berikut:
+$ su mahasiswa
+$ exit
+kemudian gunakan opsi – sebagai berikut :
+$ su – mahasiswa
+$ exit
+Jelaskan perbedaan kedua utilitas tersebut.
+3. Prompt String (PS)
+a. Edit file .bash_profile, ganti prompt PS1 dengan ‘>’. Instruksi export diperlukan
+dengan parameter nama variable tersebut, agar perubahan variable PS1 dikenal
+oleh semua shell
+PS1=’> ‘
+export PS1
+b. Eksperimen hasil PS1 :
+$ PS1=“\! > “
+69 > PS1=”\d > “
+Mon Sep 23 > PS1=”\t > “
+10:10:20 > PS1=”Saya=\u > “
+Saya=mahasiswa > PS1=”\w >”
+~ > PS1=\h >”
+4. Logout
+logout
+Edit file .bash_logout, tampilkan pesan dan tahan selama 5 detik, sebelum eksekusi
+Echo “Terima kasih atas sesi yang diberikan”
+Sleep 5
+clear
+5. Bash script
+a. Buat 3 buah script p1.sh, p2.sh, p3.sh dengan isi masing-masing :
+p1.sh
+#! /bin/bash
+echo “Program p1” ls –l
+p2.sh
+#! /bin/bash
+echo “Program p2” who
+p3.sh
+#! /bin/bash
+echo “Program p3” ps x
+b. Jalankan script tersebut sebagai berikut :
+$ ./p1.sh ; ./p3.sh ; ./p2.sh
+$ ./p1.sh &
+$ ./p1.sh $ ./p2.sh & ./p3.sh &
+$ ./p1.sh ; ./p3.sh ) &
+6. Jobs
+a. Buat shell-script yang melakukan loop dengan nama pwaktu.sh, setiap 10 detik,
+kemudian menyimpan tanggal dan jam pada file hasil.
+#!/bin/bash
+while [ true ]
+do
+date >> hasil
+sleep 10
+done
+b. Jalankan sebagai background; kemudian jalankan satu program (utilitas find) di
+background sebagai berikut :
+$ jobs
+$ find / -print > files 2>/dev/null &
+$ jobs
+c. Jadikan program ke 1 sebagai foreground, tekan ^Z dan kembalikan program
+tersebut ke background
+$ fg %1
+$ bg
+d. Stop program background dengan utilitas kill
+$ ps x
+$ kill [Nomor PID]
+7. History
+a. Ganti nilai HISTSIZE dari 1000 menjadi 20
+$ HISTSIZE=20
+$ h
+b. Gunakan fasilitas history dengan mengedit instruksi baris ke 5 dari instruksi yang
+terakhir dilakukan
+$ !-5
+c. Ulangi instruksi yang terakhir. Gunakan juga ^P dan ^N untuk bernavigasi pada
+history bufer
+$ !!
+d. e. Ulangi instruksi pada history bufer nomor 150
+$ !150
+Ulangi instruksi dengan prefix “ls”
