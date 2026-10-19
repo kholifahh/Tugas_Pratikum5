@@ -78,29 +78,79 @@ a. Buat 3 buah script p1.sh, p2.sh, p3.sh dengan isi masing-masing :
 
 b. Jalankan script tersebut sebagai berikut :
 
+<img width="1280" height="800" alt="VirtualBox_kholifahkh_19_10_2026_21_27_05" src="https://github.com/user-attachments/assets/50a5f7a5-8588-4fdd-b254-531d3995c5f4" />
+
+
+<img width="1280" height="800" alt="VirtualBox_kholifahkh_19_10_2026_21_29_09" src="https://github.com/user-attachments/assets/5b69eba7-04a7-4ca3-a1bd-6a008194632a" />
+
+
+<img width="1280" height="800" alt="VirtualBox_kholifahkh_19_10_2026_21_29_26" src="https://github.com/user-attachments/assets/3164892f-0222-48d5-b30a-518454b7a0bf" />
+
 
 
 5. Jobs
+
+   
 a. Buat shell-script yang melakukan loop dengan nama pwaktu.sh, setiap 10 detik,
 kemudian menyimpan tanggal dan jam pada file hasil.
+
+
+<img width="1280" height="800" alt="5a1" src="https://github.com/user-attachments/assets/abbe2a3f-2983-4507-bd55-f8ca2d8b849d" />
+
 
 b. Jalankan sebagai background; kemudian jalankan satu program (utilitas find) di
 background sebagai berikut :
 
+
+<img width="1280" height="800" alt="5b" src="https://github.com/user-attachments/assets/7a31ecb3-db01-4c77-b7fb-f715a481486a" />
+
+
 c. Jadikan program ke 1 sebagai foreground, tekan ^Z dan kembalikan program
 tersebut ke background
 
+
+<img width="1280" height="800" alt="5c" src="https://github.com/user-attachments/assets/c7d27e7e-9a1a-4bc0-afd1-bbb64d79f497" />
+
+
 d. Stop program background dengan utilitas kill
 
+
+
+<img width="1280" height="800" alt="5d" src="https://github.com/user-attachments/assets/4174f9a2-7d23-444d-a274-bffc473ee968" />
+
+
 6. History
+
+   
 a. Ganti nilai HISTSIZE dari 1000 menjadi 20
+
+
+<img width="1280" height="800" alt="6a" src="https://github.com/user-attachments/assets/06c552e7-d8be-42e6-b9cb-24087974efe8" />
+
 
 b. Gunakan fasilitas history dengan mengedit instruksi baris ke 5 dari instruksi yang
 terakhir dilakukan
 
+
+<img width="1280" height="800" alt="6b" src="https://github.com/user-attachments/assets/b3bc2582-4fe9-4ce3-b31e-c9872effc396" />
+
+
 c. Ulangi instruksi yang terakhir. Gunakan juga ^P dan ^N untuk bernavigasi pada
 history bufer
 
+
+<img width="1280" height="800" alt="6c" src="https://github.com/user-attachments/assets/10888fcc-7962-4b03-a9a2-b7c5d409c80a" />
+
+
 d. Ulangi instruksi pada history bufer nomor 150
 
+
+<img width="1280" height="800" alt="6d" src="https://github.com/user-attachments/assets/1ed4318c-a0ea-4b69-bdfd-db5b084fac57" />
+
+
 e. Ulangi instruksi dengan prefix “ls”
+
+
+<img width="1280" height="800" alt="6e" src="https://github.com/user-attachments/assets/79bf117f-bb55-440d-b1e0-e6f89f45f8dd" />
+
+
