@@ -62,6 +62,8 @@ b. Eksperimen hasil PS1 :
 
 
 4. Bash script
+
+
 a. Buat 3 buah script p1.sh, p2.sh, p3.sh dengan isi masing-masing :
 
 <img width="1280" height="800" alt="4a1" src="https://github.com/user-attachments/assets/5668ecac-d011-4d7e-bea8-f6cf79d93646" />
